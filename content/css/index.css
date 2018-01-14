@@ -1,0 +1,165 @@
+.list-filters {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px; }
+  .list-filters a {
+    display: block;
+    background: #333;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 3px;
+    opacity: 0.8; }
+    .list-filters a:hover, .list-filters a.active {
+      opacity: 1; }
+    .list-filters a .type-icon {
+      position: relative;
+      top: 9px; }
+
+.widget {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  max-width: 240px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  margin: 0 auto; }
+  .widget .header {
+    padding: 8px 8px 0;
+    margin-bottom: 8px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .widget .header h3 {
+      margin: 0;
+      font-size: inherit;
+      font-weight: 700;
+      padding: 2px 0; }
+    .widget .header .flag {
+      display: inline-block;
+      width: 14px;
+      height: 11px;
+      margin-left: 1px;
+      margin-right: 4px;
+      margin-top: -3px;
+      vertical-align: middle;
+      box-shadow: 0 0 0 1px rgba(165, 165, 165, 0.6);
+      background: url("../flags/flags-sd898df6596.png") 32px 81px #f7f7f7; }
+    .widget .header .time-remaining {
+      float: right; }
+    .widget .header hr {
+      margin: 8px 0 0 0; }
+  .widget .title {
+    padding: 4px 8px 8px 8px; }
+    .widget .title .type-icon {
+      margin-top: -3px;
+      margin-bottom: -4px;
+      float: right; }
+  .widget .body {
+    padding: 4px 8px 8px 8px;
+    margin: -4px;
+    margin-top: 0; }
+    .widget .body .silk-image {
+      display: inline-block;
+      width: 21px;
+      height: 20px;
+      background-image: url(../silks/1.png);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .widget .body ul {
+      width: 100%;
+      background-color: #fff;
+      color: #444;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      border-collapse: collapse;
+      list-style: none; }
+      .widget .body ul li {
+        display: table; }
+        .widget .body ul li:first-child > div {
+          border-top: 1px solid transparent; }
+    .widget .body .silk, .widget .body .runner, .widget .body .odds {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 8px 4px;
+      text-align: left;
+      line-height: 1.23;
+      border-top: 1px solid #D9D9D9; }
+    .widget .body .silk:first-child, .widget .body .runner:first-child, .widget .body .odds:first-child {
+      padding-left: 8px; }
+    .widget .body .silk:last-child, .widget .body .runner:last-child, .widget .body .odds:last-child {
+      padding-right: 8px; }
+    .widget .body .silk {
+      width: 20px; }
+    .widget .body .runner {
+      width: 100%; }
+      .widget .body .runner a {
+        line-height: 2; }
+    .widget .body .odds {
+      text-align: right;
+      width: 40px; }
+      .widget .body .odds .button-bet {
+        min-width: 36px;
+        padding-left: 0;
+        padding-right: 0;
+        border: 1px solid #f2c71c;
+        color: #444;
+        font-weight: 400;
+        background-image: linear-gradient(#ffdd86, #f8ae17);
+        padding: 2px 4px;
+        user-select: none;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 1.364;
+        border-radius: 3px;
+        cursor: pointer;
+        text-align: center; }
+        .widget .body .odds .button-bet:hover {
+          border-color: #f69610;
+          background-image: linear-gradient(#ffd361, #f69610); }
+
+body {
+  font-family: Tahoma,Geneva,Kalimati,sans-serif;
+  font-size: 11px; }
+  body a {
+    text-decoration: none;
+    background-color: transparent;
+    color: inherit; }
+
+.content {
+  width: 250px;
+  margin: 0 auto;
+  position: relative;
+  top: 200px; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: none;
+  background-color: #666; }
+
+ul li {
+  list-style-type: none; }
+
+.type-icon {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  background-color: transparent;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9); }
+  .type-icon.type-g {
+    background: url(../race-types/race-type-G.svg) no-repeat; }
+  .type-icon.type-j {
+    background: url(../race-types/race-type-J.svg) no-repeat; }
+  .type-icon.type-t {
+    background: url(../race-types/race-type-T.svg) no-repeat; }
+  .type-icon.type-d {
+    background: url(../race-types/race-type-D.svg) no-repeat; }
+
+/*# sourceMappingURL=index.css.map */

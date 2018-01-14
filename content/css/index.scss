@@ -1,0 +1,54 @@
+@import 'mixins';
+@import 'filters';
+@import 'widget';
+
+body{
+    font-family: Tahoma,Geneva,Kalimati,sans-serif;
+    font-size: 11px;
+
+    a{
+        text-decoration: none;
+        background-color: transparent;
+        color: inherit;
+    }
+}
+
+.content{
+    width: 250px;
+    margin: 0 auto;    
+    position: relative;
+    top: 200px; 
+}
+
+hr{
+    display: block;    
+    height: 1px;
+    border: none;    
+    background-color: #666;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.type-icon{
+    display: inline-block;    
+    position: relative;
+    width: 30px;
+    height: 18px;            
+    background-color: transparent;
+    @include transform(scale(.9));
+
+    &.type-g{
+        background: url(../race-types/race-type-G.svg) no-repeat;
+    }
+    &.type-j{
+        background: url(../race-types/race-type-J.svg) no-repeat;
+    }
+    &.type-t{
+        background: url(../race-types/race-type-T.svg) no-repeat;
+    }
+    &.type-d{
+        background: url(../race-types/race-type-D.svg) no-repeat;
+    }
+}

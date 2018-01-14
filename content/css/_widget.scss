@@ -1,0 +1,158 @@
+
+
+.widget{
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    max-width: 240px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    margin: 0 auto;       
+
+    .header{
+        padding: 8px 8px 0;
+        margin-bottom: 8px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    
+        h3{
+            margin: 0;
+            font-size: inherit;
+            font-weight: 700;
+            padding: 2px 0;
+        }
+    
+        .flag{
+            display: inline-block;
+            width: 14px;
+            height: 11px;
+            margin-left: 1px;
+            margin-right: 4px;
+            margin-top: -3px;
+            vertical-align: middle;
+            box-shadow: 0 0 0 1px rgba(165,165,165,.6);
+            background: url("../flags/flags-sd898df6596.png") 32px 81px #f7f7f7;
+        }
+    
+        .time-remaining{
+            float: right;
+        }
+    
+        hr{
+            margin: 8px 0 0 0;
+        }
+    }
+    
+    .title{
+        padding: 4px 8px 8px 8px;
+    
+        .type-icon{
+            margin-top: -3px;
+            margin-bottom: -4px;
+            float: right;
+        }
+    }
+    
+    .body{
+        padding: 4px 8px 8px 8px;
+        margin: -4px;
+        margin-top: 0;
+    
+        .silk-image{
+            display: inline-block;
+            width: 21px;
+            height: 20px;
+            background-image: url(../silks/1.png);
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        ul{
+            width: 100%;
+            background-color: #fff;
+            color: #444;
+            position: relative;        
+            margin: 0;
+            padding: 0;        
+            border-collapse: collapse;
+            list-style: none;
+
+            li{
+                display: table;                
+
+                &:first-child > div{
+                    border-top: 1px solid transparent;     
+                }               
+                
+            }
+            
+        }
+
+        %list-cell{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 8px 4px;            
+            text-align: left;
+            line-height: 1.23;            
+            border-top: 1px solid #D9D9D9;            
+        }
+        %list-cell:first-child{
+            padding-left: 8px;
+        }
+        %list-cell:last-child{
+            padding-right: 8px;
+        }
+
+        .silk{
+            @extend %list-cell;    
+            width: 20px;    
+        }
+
+        .runner{
+            @extend %list-cell;
+            width: 100%;
+
+            a{
+                line-height: 2;
+            }
+        }
+
+        .odds{
+            @extend %list-cell;
+            text-align: right;
+            width: 40px;
+
+            .button-bet{
+                min-width: 36px;
+                padding-left: 0;
+                padding-right: 0;
+                border: 1px solid #f2c71c;
+                color: #444;
+                font-weight: 400;                
+                background-image: linear-gradient(#ffdd86,#f8ae17);
+                padding: 2px 4px;                
+                user-select: none;
+                box-sizing: border-box;
+                display: inline-block;        
+                font-size: 11px;    
+                line-height: 1.364;    
+                border-radius: 3px;
+                cursor: pointer;
+                text-align: center;
+
+                &:hover{
+                    border-color: #f69610;                    
+                    background-image: linear-gradient(#ffd361,#f69610);
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+

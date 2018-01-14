@@ -6,7 +6,7 @@ var raceWidget = new class RaceWidget{
     
     constructor(){
         
-        $.getJSON('https://ventii.github.io/racebets/next_races.json')
+        $.getJSON('../next_races.json')
         .done((resp) =>{
            if(resp.status != "success")
            {

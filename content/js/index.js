@@ -6,10 +6,16 @@ var raceWidget = new class RaceWidget{
     
     constructor(){
         
-        $.getJSON('../next_races.json', function(data){
-            debugger;
-            alert(JSON.stringify(data));
-        })
+        $.getJSON('https://ventii.github.io/racebets/next_races.json')
+        .done((resp) =>{
+           if(resp.status != "success")
+           {
+               alert("could not get data :(");
+           } 
+           else{
+               this.races = resp.data.races;
+           }
+        });
     }
 
 }
@@ -38,5 +44,5 @@ function toggleFilter(e){
         activeFilters.push(raceType);
     }   
     
-    alert(raceWidget.testing);
+    alert(raceWidget.races.length);
 }

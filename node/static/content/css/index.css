@@ -1,6 +1,6 @@
 .list-filters {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0px; }
   .list-filters a {
     display: block;
@@ -9,8 +9,11 @@
     height: 35px;
     text-align: center;
     border-radius: 3px;
-    opacity: 0.8; }
-    .list-filters a:hover, .list-filters a.active {
+    opacity: 0.75;
+    margin: 0 10px; }
+    .list-filters a:hover {
+      opacity: 0.85; }
+    .list-filters a.active {
       opacity: 1; }
     .list-filters a .type-icon {
       position: relative;
@@ -23,7 +26,14 @@
   max-width: 240px;
   border-radius: 3px;
   border: 1px solid transparent;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 100px; }
+  .widget .race-data {
+    display: none; }
+  .widget .nodata {
+    display: none;
+    text-align: center;
+    margin: 40px; }
   .widget .header {
     padding: 8px 8px 0;
     margin-bottom: 8px;
@@ -44,6 +54,10 @@
       vertical-align: middle;
       box-shadow: 0 0 0 1px rgba(165, 165, 165, 0.6);
       background: url("../flags/flags-sd898df6596.png") 32px 81px #f7f7f7; }
+      .widget .header .flag.IE {
+        background-position: 60% -1142px !important; }
+      .widget .header .flag.GB {
+        background-position: 50% -856px; }
     .widget .header .time-remaining {
       float: right; }
     .widget .header hr {
@@ -62,10 +76,21 @@
       display: inline-block;
       width: 21px;
       height: 20px;
-      background-image: url(../silks/1.png);
       background-size: 100% auto;
       background-repeat: no-repeat;
       background-position: center; }
+      .widget .body .silk-image.silk-1 {
+        background-image: url(../silks/1.png); }
+      .widget .body .silk-image.silk-2 {
+        background-image: url(../silks/2.png); }
+      .widget .body .silk-image.silk-3 {
+        background-image: url(../silks/3.png); }
+      .widget .body .silk-image.silk-4 {
+        background-image: url(../silks/4.png); }
+      .widget .body .silk-image.silk-5 {
+        background-image: url(../silks/5.png); }
+      .widget .body .silk-image.silk-6 {
+        background-image: url(../silks/6.png); }
     .widget .body ul {
       width: 100%;
       background-color: #fff;
@@ -120,6 +145,59 @@
           border-color: #f69610;
           background-image: linear-gradient(#ffd361, #f69610); }
 
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em; }
+
+.loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  margin: 40px auto;
+  position: relative;
+  font-size: 4px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s; }
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: ''; }
+
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s; }
+
+.loader:after {
+  left: 1.5em; }
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em; }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em; } }
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em; }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em; } }
 body {
   font-family: Tahoma,Geneva,Kalimati,sans-serif;
   font-size: 11px; }

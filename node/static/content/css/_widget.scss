@@ -8,6 +8,16 @@
     border-radius: 3px;
     border: 1px solid transparent;
     margin: 0 auto;       
+    min-height: 100px;
+    
+    .race-data{
+        display: none;
+    }
+    .nodata{
+        display: none;
+        text-align: center;
+        margin: 40px;
+    }
 
     .header{
         padding: 8px 8px 0;
@@ -32,7 +42,15 @@
             vertical-align: middle;
             box-shadow: 0 0 0 1px rgba(165,165,165,.6);
             background: url("../flags/flags-sd898df6596.png") 32px 81px #f7f7f7;
+
+            &.IE{
+                background-position: 60% -1142px !important;
+            }
+            &.GB{
+                background-position: 50% -856px;
+            }
         }
+        
     
         .time-remaining{
             float: right;
@@ -61,11 +79,29 @@
         .silk-image{
             display: inline-block;
             width: 21px;
-            height: 20px;
-            background-image: url(../silks/1.png);
+            height: 20px;            
             background-size: 100% auto;
             background-repeat: no-repeat;
             background-position: center;
+
+            &.silk-1{
+                background-image: url(../silks/1.png);
+            }
+            &.silk-2{
+                background-image: url(../silks/2.png);
+            }
+            &.silk-3{
+                background-image: url(../silks/3.png);
+            }
+            &.silk-4{
+                background-image: url(../silks/4.png);
+            }
+            &.silk-5{
+                background-image: url(../silks/5.png);
+            }
+            &.silk-6{
+                background-image: url(../silks/6.png);
+            }
         }
 
         ul{

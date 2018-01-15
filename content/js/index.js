@@ -6,7 +6,7 @@ var raceWidget = new class RaceWidget{
     
     constructor(){
         
-        $.getJSON('next_races.json')
+        $.getJSON('http://localhost:8000/races')
         .done((resp) =>{
            if(resp.status != "success")
            {

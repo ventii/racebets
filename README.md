@@ -1,6 +1,6 @@
 # racebets
 
-This project required Node.js. Please install the latest version from https://nodejs.org/en/ before proceeding.
+This project requires Node.js. Please install the latest version from https://nodejs.org/en/ before proceeding.
 
 Instructions:
 

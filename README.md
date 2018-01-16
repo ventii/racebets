@@ -8,3 +8,8 @@ Instructions:
 2. navigate to "node" folder
 3. run node server from command prompt using "node server.js"
 4. open your browser to localhost:8000
+
+Tools and resources:
+
+-Javascript/jQuery/SCSS/NodeJS
+-Socket.io/Babel.js/Moment.js

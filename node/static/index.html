@@ -37,13 +37,14 @@
                 </li>
             </ul>
         </div>
+        
         <div id="next-race-widget" class="widget">
             <div class="nodata">No race :(</div>
             <div class="loader"></div>
             <div class="race-data">
                 <div class="header">
                     <h3>
-                        <a href="">
+                        <a href="" class="race-link">
                             <span class="flag"></span>
                             <span class="event-title">Pau</span>
                             <span class="time-remaining">4 minutes</span>
@@ -52,7 +53,7 @@
                     <hr>
                 </div>
                 <div class="title">
-                    <a href="">
+                    <a href="" class="race-link">
                         <span class="runners-count">9 runners</span>&nbsp;|&nbsp;
                         <span class="distance">5,000m</span>&nbsp;|&nbsp;
                         <span class="purse">40,000 EUR</span>
@@ -60,72 +61,27 @@
                     </a>
                 </div>
                 <div class="body">
-                    <ul>
-                        <li>
-                            <div class="silk">
-                                <a href="">
-                                    <span class="silk-image">
-
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="runner">
-                                <a href="">
-                                    Sierra Foxtrot
-                                </a>
-                            </div>
-                            <div class="odds">
-                                <a class="button-bet">
-                                    <span class="odds-amount">5.5</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="silk">
-                                <a href="">
-                                    <span class="silk-image">
-
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="runner">
-                                <a href="">
-                                    Sierra Foxtrot
-                                </a>
-                            </div>
-                            <div class="odds">
-                                <a class="button-bet">
-                                    <span class="odds-amount">5.5</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="silk">
-                                <a href="">
-                                    <span class="silk-image">
-
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="runner">
-                                <a href="">
-                                    Sierra Foxtrot
-                                </a>
-                            </div>
-                            <div class="odds">
-                                <a class="button-bet">
-                                    <span class="odds-amount">5.5</span>
-                                </a>
-                            </div>
-                        </li>
+                    <ul>                       
                     </ul>
                 </div>
             </div>
         </div>
+
+        <div id="socketbutton">
+            <button>add dummy</button>
+        </div>
+        <p>Click this button to test real-time websockets. After clicking it,
+            you will be able to see a dogs race in silverstone. All open tabs
+            should see it.
+            <br>
+            <br>
+            Data is hardcoded so please click it once :)
+        </p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/en-gb.js"></script>
     <script src="content/js/babel.min.js"></script>
+    <script src="content/js/socket.io.js"></script>
     <script src="content/js/index.js" type="text/babel"></script>
 </body>
 

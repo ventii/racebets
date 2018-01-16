@@ -1,5 +1,6 @@
-var activeFilters = ['g','j','t'];
+$.ajaxSetup({ cache: false });
 
+var activeFilters = ['g','j','t'];
 
 
 var raceWidget = new class RaceWidget{
@@ -79,6 +80,9 @@ var raceWidget = new class RaceWidget{
         let $title = $("#next-race-widget .title");
         let $bodyList = $("#next-race-widget .body > ul");
 
+        $("#next-race-widget .race-link").attr("href", "http://www.racebets.com/bet/" + race.id_race)
+                                         .attr("target", "_blank");
+
         $header.find(".event-title").text(race.event.title);
         $header.find(".flag").attr("class", "flag " + race.event.country);
         $header.find(".time-remaining").text(moment.unix(race.post_time).fromNow());
@@ -103,11 +107,12 @@ var raceWidget = new class RaceWidget{
             if(drawSilk)
             {
                 let $divSilk = $("<div>", {class: "silk"});
-                $divSilk.append($("<a>", {href:""}).append($("<span>", {class: "silk-image silk-" + runner.silk.replace(".png","")})));
+                $divSilk.append($("<a>", {href:"http://www.racebets.com/bet/" + race.id_race, target: "_blank"}).append($("<span>", {class: "silk-image silk-" + runner.silk.replace(".png","")})));
                 $li.append($divSilk);
             }
 
-            let $divRunner = $("<div>", {class: "runner"}).append(runner.name);
+            let $divRunner = $("<div>", {class: "runner"})
+            $divRunner.append($("<a>", {href:"http://www.racebets.com/bet/" + race.id_race, target: "_blank"}).append(runner.name));            
             $li.append($divRunner);
             
             let $divOdds = $("<div>", {class: "odds"});
@@ -127,8 +132,17 @@ var raceWidget = new class RaceWidget{
 }
 
 $(() =>{   
+    
+    var socket = io();
 
+    socket.on("race added", (message) => {
+        raceWidget.getNextRace();
+    });
+    
     $(".list-filters a").on("click", toggleFilter);
+
+    $("#socketbutton").on("click", postDummy);
+
 });
 
 function toggleFilter(e){    
@@ -150,4 +164,12 @@ function toggleFilter(e){
     }      
     
     raceWidget.getNextRace();
+}
+
+function postDummy(e){
+    e.preventDefault();
+
+    $.post( "/race", (data) => {
+        //do nothing. let socket io to the work for demonstration.
+      });
 }
